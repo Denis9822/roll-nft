@@ -217,7 +217,7 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 120%;
+    line-height: 100%;
     /* or 19px */
     text-align: center;
     letter-spacing: -0.04em;
@@ -228,6 +228,10 @@ header {
     cursor: pointer;
     position: relative;
     z-index: 10;
+}
+
+.partners_item:nth-child(4n) img {
+    height: 29px;
 }
 
 .wheel {
@@ -347,7 +351,7 @@ header {
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 1111;
-    bottom: 200px;
+    top: 301px;
 }
 
 .wheel_items {
@@ -859,7 +863,7 @@ header {
 }
 
 .popup_container .win_btns {
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .wallet_items {
@@ -921,12 +925,12 @@ header {
 }
 
 .popup_price .popup_mask {
-    display: none;
+    display: block;
     z-index: 10;
 }
 
 .popup_price .popup_wrap {
-    display: none;
+    display: block;
     z-index: 10;
 }
 
@@ -1002,6 +1006,13 @@ header {
     display: flex;
     align-items: center;
     font-weight: bold;
+    box-shadow: inset 0px 0px 30px 10px lightcoral;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.btn_claim {
+    cursor: pointer;
 }
 
 .item_price span {
