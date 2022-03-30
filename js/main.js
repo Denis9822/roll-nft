@@ -4,7 +4,33 @@ var winItemLength = 69;
 var winItemImg = 0;
 var winItemPrice = 0;
 
-//random items 
+//random items
+
+function shuffle(array) {
+    for (
+        // инициализация цикла
+        var j, x, i = array.length;
+        // условие остановки (i<=0)
+        i;
+        // итерации цикла
+        j = parseInt(Math.random() * i),
+        x = array[--i], // i здесь уменьшается до нуля
+        array[i] = array[j],
+        array[j] = x
+    );
+}
+
+function getRandom(min, max) {
+    // Получаем массив чисел из диапазона от min до max
+    var arr = Array.from(Array(max - min + 1).keys(), x => x + min);
+    // Перемешиваем
+    shuffle(arr);
+    // возвращаем перемешанный массив
+    return arr;
+}
+var a = getRandom(3, 15);
+// console.log(a);
+
 function getRandomInt(max) {
     let res = Math.floor(Math.random() * max);
     if (res == 0)

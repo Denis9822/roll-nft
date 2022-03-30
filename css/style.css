@@ -351,7 +351,7 @@ header {
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 1111;
-    top: 301px;
+    top: 282px;
 }
 
 .wheel_items {
@@ -1048,7 +1048,7 @@ header {
     letter-spacing: -0.04em;
     color: #969697;
     margin-top: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
@@ -1252,7 +1252,6 @@ header {
     }
     .arrow-up {
         width: 35px;
-        bottom: 151px;
     }
     .btn_wheel {
         width: 139px;
