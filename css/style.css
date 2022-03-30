@@ -1299,6 +1299,14 @@ header {
     .popup_wrap {
         width: 100%;
     }
+    .popup_container .win_btns {
+        justify-content: space-evenly;
+    }
+    .btn_claim {
+        width: 142px;
+        height: 34px;
+        font-size: 12px;
+    }
     .wallet_item {
         width: 42vw;
     }
