@@ -863,7 +863,7 @@ header {
 }
 
 .popup_container .win_btns {
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .wallet_items {
@@ -1039,7 +1039,7 @@ header {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 5.48466px;
+    font-size: 7.48466px;
     line-height: 7px;
     /* identical to box height */
     display: flex;
@@ -1047,8 +1047,8 @@ header {
     text-align: center;
     letter-spacing: -0.04em;
     color: #969697;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 0px;
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
@@ -1303,7 +1303,7 @@ header {
         margin-right: 0;
     }
     .popup_container .win_btns {
-        justify-content: space-evenly;
+        justify-content: center;
     }
     .btn_claim {
         width: 142px;
