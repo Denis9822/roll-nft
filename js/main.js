@@ -59,10 +59,9 @@ function callback() {
     $('.popup_container .win_item_img img').attr('src', winItemImg);
     audio.pause();
     audio.currentTime = 0;
-    wheelClick = false;
-    $(".wheel_wrap").animate({
-        marginLeft: '0px'
-    }, 100, updateWheel);
+    // $(".wheel_wrap").animate({
+    //     marginLeft: '0px'
+    // }, 100, updateWheel);
 }
 
 
