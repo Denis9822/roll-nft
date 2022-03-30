@@ -925,12 +925,12 @@ header {
 }
 
 .popup_price .popup_mask {
-    display: block;
+    display: none;
     z-index: 10;
 }
 
 .popup_price .popup_wrap {
-    display: block;
+    display: none;
     z-index: 10;
 }
 
