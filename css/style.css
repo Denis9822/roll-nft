@@ -1299,6 +1299,9 @@ header {
     .popup_wrap {
         width: 100%;
     }
+    .partners_item {
+        margin-right: 0;
+    }
     .popup_container .win_btns {
         justify-content: space-evenly;
     }
