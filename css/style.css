@@ -1276,9 +1276,13 @@ header {
     }
     .partners_item img {
         width: 69px;
+        height: auto;
     }
     .partners_items {
         margin-top: 12px;
+    }
+    .partners_item:nth-child(4n) img {
+        height: 16px;
     }
     .partners {
         padding-bottom: 42px;
