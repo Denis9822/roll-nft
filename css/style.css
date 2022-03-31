@@ -777,7 +777,7 @@ header {
     width: 54vw;
     margin: 0 auto;
     border: 0px solid silver;
-    display: grid;
+    display: none;
     grid-auto-flow: column;
     /* overflow-x: hidden; */
     grid-gap: 10px;
@@ -986,6 +986,10 @@ header {
     }
     .wheel_wrap {
         width: 60vw;
+    }
+    .wheel {
+        margin-bottom: 5vh !important;
+        margin-top: 7vh;
     }
 }
 

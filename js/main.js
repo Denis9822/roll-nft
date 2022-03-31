@@ -28,7 +28,7 @@ function getRandom(min, max) {
     // возвращаем перемешанный массив
     return arr;
 }
-var a = getRandom(3, 15);
+var a = getRandom(0, 73);
 // console.log(a);
 
 function getRandomInt(max) {
@@ -40,15 +40,29 @@ function getRandomInt(max) {
 }
 
 function updateWheel() {
-    $('.wheel_wrap_item').each(function(index) {
+
+    a.forEach((element, index) => {
+
+        console.log(index);
         let imageId = getRandomInt(14);
         let shadowStyle = getRandomInt(3);
-        let randomPrice = getRandomInt(4700);
-        $(this).children().children('img').attr('src', 'img/price-items/Frame ' + imageId + '.png');
-        $(this).children().children('.item_price').children('p').html(randomPrice);
+        let randomPrice = getRandomInt(47);
 
-        $(this).addClass('shadow--style-' + shadowStyle);
+        $('.wheel_wrap_item').eq(index).children().children('img').attr('src', 'img/price-items/Frame ' + element + '.png');
+        $('.wheel_wrap_item').eq(index).children().children('.item_price').children('p').html(randomPrice);
+        $('.wheel_wrap_item').eq(index).addClass('shadow--style-' + shadowStyle);
+        $('.wheel_wrap').attr('style', 'display:grid');
     });
+
+    // $('.wheel_wrap_item').each(function(index) {
+    //     let imageId = getRandomInt(14);
+    //     let shadowStyle = getRandomInt(3);
+    //     let randomPrice = getRandomInt(4700);
+    //     $(this).children().children('img').attr('src', 'img/price-items/Frame ' + imageId + '.png');
+    //     $(this).children().children('.item_price').children('p').html(randomPrice);
+
+    //     $(this).addClass('shadow--style-' + shadowStyle);
+    // });
 }
 updateWheel();
 
