@@ -31,22 +31,44 @@ function getRandom(min, max) {
 var a = getRandom(0, 73);
 // console.log(a);
 
-function getRandomInt(max) {
-    let res = Math.floor(Math.random() * max);
-    if (res == 0)
-        return getRandomInt(max);
-    else
-        return res;
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function updateWheel() {
 
     a.forEach((element, index) => {
 
-        console.log(index);
-        let imageId = getRandomInt(14);
-        let shadowStyle = getRandomInt(3);
-        let randomPrice = getRandomInt(47);
+
+        let imageId = getRandomInt(1, 14);
+        let shadowStyle = getRandomInt(1, 2);
+        let randomPrice = getRandomInt(1, 47);
+        if (index < 50 && (randomPrice > 5 && randomPrice < 11)) {
+            randomPrice = getRandomInt(3000, 7000);
+            shadowStyle = 3;
+        }
+
+        if ($(window).width() < 769) {
+            if (index == 67) {
+                randomPrice = getRandomInt(3000, 7000);
+                shadowStyle = 3;
+                winItemLength = 67;
+            }
+        } else if ($(window).width() < 1500) {
+
+            if (index == 68) {
+                randomPrice = getRandomInt(3000, 7000);
+                shadowStyle = 3;
+                winItemLength = 68;
+            }
+        } else {
+            if (index == 69) {
+                randomPrice = getRandomInt(3000, 7000);
+                shadowStyle = 3;
+                winItemLength = 69;
+            }
+        }
+
 
         $('.wheel_wrap_item').eq(index).children().children('img').attr('src', 'img/price-items/Frame ' + element + '.png');
         $('.wheel_wrap_item').eq(index).children().children('.item_price').children('p').html(randomPrice);
@@ -54,15 +76,6 @@ function updateWheel() {
         $('.wheel_wrap').attr('style', 'display:grid');
     });
 
-    // $('.wheel_wrap_item').each(function(index) {
-    //     let imageId = getRandomInt(14);
-    //     let shadowStyle = getRandomInt(3);
-    //     let randomPrice = getRandomInt(4700);
-    //     $(this).children().children('img').attr('src', 'img/price-items/Frame ' + imageId + '.png');
-    //     $(this).children().children('.item_price').children('p').html(randomPrice);
-
-    //     $(this).addClass('shadow--style-' + shadowStyle);
-    // });
 }
 updateWheel();
 
@@ -70,17 +83,13 @@ $('.wheel_items').show();
 
 
 //animate wheel
-$('.btn_wheel').click(function() {
+$('.wheel_start').click(function() {
+    $('.popup_mask').hide();
+    $('.popup_wrap').hide();
     if (wheelClick == false) {
         $(".wheel_wrap").animate({
             marginLeft: '-14056px'
         }, 8000, null, callback);
-
-        if ($(window).width() < 1500)
-            winItemLength = 68;
-
-        if ($(window).width() < 769)
-            winItemLength = 67;
 
         winItemImg = $('.wheel_wrap_item').eq(winItemLength).children().children('img').attr('src');
         winItemPrice = $('.wheel_wrap_item').eq(winItemLength).children().children('.item_price').children('p').html();
@@ -88,8 +97,11 @@ $('.btn_wheel').click(function() {
         var ind = 1;
         audio.volume = 0.03;
         audio.play();
-
     }
+})
+$('.btn_wheel').click(function() {
+    $('.popup_info .popup_mask').toggle();
+    $('.popup_info .popup_wrap').animate({ left: 'toggle' });
 })
 
 function callback() {
@@ -99,9 +111,6 @@ function callback() {
     $('.popup_container .win_item_img img').attr('src', winItemImg);
     audio.pause();
     audio.currentTime = 0;
-    // $(".wheel_wrap").animate({
-    //     marginLeft: '0px'
-    // }, 100, updateWheel);
 }
 
 

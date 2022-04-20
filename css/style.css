@@ -160,6 +160,36 @@ header {
     letter-spacing: -0.04em;
 }
 
+.header_right_wallet2 {
+    width: 193px;
+    height: 44px;
+    margin-right: 44px;
+    background: #2FBB99;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.header_right_wallet2 img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.header_right_wallet2 p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: -0.04em;
+}
+
 .main {
     margin-top: 75px;
 }
@@ -606,6 +636,48 @@ header {
     color: #2fbb99;
 }
 
+.popup_info .popup_mask {
+    display: none;
+    z-index: 10;
+}
+
+.popup_info .popup_wrap {
+    display: none;
+    z-index: 10;
+}
+
+.popup_info .popup_price_header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 38px;
+    /* identical to box height */
+    text-align: center;
+    color: #0D0D0D;
+    margin: 0 auto;
+}
+
+.popup_info .popup_price_header span {
+    color: #2fbb99;
+}
+
+.popup_info_text {
+    color: #020202;
+    font-size: 22px;
+    display: flex;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.popup_info_subtext {
+    color: #020202;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .win_item {
     margin: 0 auto;
     margin-top: 75px;
@@ -724,7 +796,17 @@ header {
     background-position: center;
 }
 
+.popup_info .popup_wrap {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .win_btns .header_right_wallet {
+    margin-right: 0;
+}
+
+.win_btns .header_right_wallet2 {
     margin-right: 0;
 }
 
@@ -732,6 +814,13 @@ header {
     border-radius: 26px;
     width: 480px;
     height: 559px;
+    box-sizing: border-box;
+}
+
+.popup_info .popup_wrap {
+    border-radius: 26px;
+    width: 480px;
+    height: auto;
     box-sizing: border-box;
 }
 
@@ -761,7 +850,7 @@ header {
 }
 
 .shadow--style-3 {
-    box-shadow: inset 0px 0px 30px 1px lightyellow;
+    box-shadow: inset 0px 0px 30px 1px red;
 }
 
 .win_item_img {
@@ -792,18 +881,9 @@ header {
     margin-bottom: 13vh;
 }
 
-
-/* .wheel::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    border: 1px solid silver;
-    right: -20px;
-    top: 0;
-    mask-image: linear-gradient(90deg, #0D0D0D 53.75%, rgba(13, 13, 13, 0) 102.88%);
-    -webkit-mask-image: linear-gradient(90deg, #0D0D0D 53.75%, rgba(13, 13, 13, 0) 102.88%);
-} */
+* {
+    font-family: 'Open Sans', sans-serif !important;
+}
 
 @media screen and (max-width: 1400px) {
     .partners_item {
@@ -863,12 +943,11 @@ header {
     .header_right {
         margin-top: 19px;
     }
-    .header_right_wallet {
-        width: 118px;
-        height: 34px;
+    .btn_wheel p {
+        font-size: 12px;
     }
-    .price_btns .header_right_wallet {
-        width: 139px;
+    .header_right_wallet {
+        width: 169px;
         height: 36px;
         margin-top: 10px;
     }
@@ -876,6 +955,23 @@ header {
         font-size: 12px;
     }
     .header_right_wallet img {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+    .header_right_wallet2 {
+        width: 118px;
+        height: 34px;
+    }
+    .price_btns .header_right_wallet2 {
+        width: 169px;
+        height: 36px;
+        margin-top: 10px;
+    }
+    .header_right_wallet2 p {
+        font-size: 12px;
+    }
+    .header_right_wallet2 img {
         width: 20px;
         height: 20px;
         margin-right: 6px;
@@ -901,6 +997,9 @@ header {
         width: 77%;
         height: 500px;
     }
+    .popup_info .popup_wrap {
+        width: 100%;
+    }
     .wheel_w img {
         width: 35px;
     }
@@ -912,7 +1011,7 @@ header {
         width: 35px;
     }
     .btn_wheel {
-        width: 139px;
+        width: 169px;
         height: 36px;
         box-sizing: border-box;
         font-size: 14px;
