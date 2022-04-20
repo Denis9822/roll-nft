@@ -48,26 +48,26 @@ function updateWheel() {
             shadowStyle = 3;
         }
 
-        if ($(window).width() < 769) {
-            if (index == 67) {
-                randomPrice = getRandomInt(3000, 7000);
-                shadowStyle = 3;
-                winItemLength = 67;
-            }
-        } else if ($(window).width() < 1500) {
+        // if ($(window).width() < 769) {
+        //     if (index == 67) {
+        //         randomPrice = getRandomInt(3000, 7000);
+        //         shadowStyle = 3;
+        //         winItemLength = 67;
+        //     }
+        // } else if ($(window).width() < 1550) {
 
-            if (index == 68) {
-                randomPrice = getRandomInt(3000, 7000);
-                shadowStyle = 3;
-                winItemLength = 68;
-            }
-        } else {
-            if (index == 69) {
-                randomPrice = getRandomInt(3000, 7000);
-                shadowStyle = 3;
-                winItemLength = 69;
-            }
+        //     if (index == 68) {
+        //         randomPrice = getRandomInt(3000, 7000);
+        //         shadowStyle = 3;
+        //         winItemLength = 68;
+        //     }
+        // } else {
+        if (index == 69) {
+            randomPrice = getRandomInt(3000, 7000);
+            shadowStyle = 3;
+            winItemLength = 69;
         }
+        // }
 
 
         $('.wheel_wrap_item').eq(index).children().children('img').attr('src', 'img/price-items/Frame ' + element + '.png');
@@ -80,15 +80,17 @@ function updateWheel() {
 updateWheel();
 
 $('.wheel_items').show();
-
-
+let pos = $('.wheel_wrap_item').eq(winItemLength).offset().left - $(window).width() / 2.2;
+console.log(pos);
 //animate wheel
 $('.wheel_start').click(function() {
     $('.popup_mask').hide();
     $('.popup_wrap').hide();
+
     if (wheelClick == false) {
+
         $(".wheel_wrap").animate({
-            marginLeft: '-14056px'
+            marginLeft: '-' + pos
         }, 8000, null, callback);
 
         winItemImg = $('.wheel_wrap_item').eq(winItemLength).children().children('img').attr('src');

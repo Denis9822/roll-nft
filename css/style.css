@@ -379,9 +379,9 @@ header {
     width: 35px;
     height: auto;
     left: 50%;
-    transform: translate(-50%, 0) rotate(180deg);
+    transform: translate(-50%);
     z-index: 1111;
-    top: -2px;
+    top: 12px;
 }
 
 .wheel_items {
@@ -870,6 +870,7 @@ header {
     grid-auto-flow: column;
     /* overflow-x: hidden; */
     grid-gap: 10px;
+    padding-top: 24px;
 }
 
 .wheel {
@@ -877,7 +878,7 @@ header {
     mask-image: linear-gradient(90deg, #0D0D0D 53.75%, rgba(13, 13, 13, 0) 102.88%);
     -webkit-mask-image: -webkit-gradient(linear, left center, right center, color-stop(0, transparent), color-stop(.15, rgba(0, 0, 0, .5)), color-stop(.25, black), color-stop(.75, black), color-stop(.85, rgba(0, 0, 0, .5)), color-stop(1, transparent));
     z-index: 10;
-    margin-top: 17vh;
+    margin-top: 15vh;
     margin-bottom: 13vh;
 }
 
