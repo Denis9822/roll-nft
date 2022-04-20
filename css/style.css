@@ -1015,6 +1015,12 @@ header {
         flex-direction: column;
         margin-top: 55px;
     }
+    .popup_info .price_btns {
+        margin-top: 35px;
+    }
+    .wallet_more a {
+        font-size: 15px;
+    }
     .arrow-up {
         width: 35px;
     }
