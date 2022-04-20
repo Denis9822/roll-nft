@@ -749,7 +749,9 @@ header {
 }
 
 .item_price span {
-    font-size: 20px;
+    font-size: 22px;
+    position: relative;
+    top: 0px;
 }
 
 .win_item_name {
