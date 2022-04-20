@@ -530,6 +530,10 @@ header {
     justify-content: space-between;
 }
 
+.popup_info .popup_header p {
+    font-weight: 700;
+}
+
 .popup_header p {
     font-style: normal;
     font-weight: 400;
@@ -662,7 +666,7 @@ header {
 }
 
 .popup_info_text {
-    color: #020202;
+    color: #0D0D0D;
     font-size: 22px;
     display: flex;
     margin-top: 70px;
@@ -789,6 +793,8 @@ header {
     justify-content: space-between;
 }
 
+.bg-popup_info {}
+
 .popup_price .popup_wrap {
     background-image: url('../img/win_bg.png');
     background-repeat: no-repeat;
@@ -800,6 +806,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 .win_btns .header_right_wallet {
